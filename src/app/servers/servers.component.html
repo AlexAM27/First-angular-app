@@ -1,13 +1,15 @@
+
 <p>Servers works!</p>
 <input type="text" 
     class="form-control"
     (input)="onServerNameInput($event)">
-<p> {{ serverName }}</p>
+<!-- <p> {{ serverName }}</p> -->
 <h3></h3>
 <button class="btn bnt-primary" 
     [disabled]="!allowAddServerButton" 
     (click)="onCreateServer()">Add new server</button>
 <!-- <p [innerText]="allowAddServerButton"></p> -->
-<p>{{ serverCreatinonStatus }}</p>
+<!-- <p>{{ serverCreatinonStatus }}</p> -->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 <app-server></app-server>
 <app-server></app-server>
